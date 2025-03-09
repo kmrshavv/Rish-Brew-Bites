@@ -1,0 +1,196 @@
+/* ====================================================================== */
+/* Main Stylesheet for Food Heaven with Mobile Compatibility Enhancements */
+/* ====================================================================== */
+
+/* ================================================ */
+/* Reset & Base Styles */
+/* ================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  /* ================================================ */
+  /* Navbar & Header Styles */
+  /* ================================================ */
+  .navbar {
+    background: #ff6347;  /* Vibrant red-orange for a food vibe */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  .navbar a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  .navbar a:hover {
+    color: #ffd700;  /* Gold color on hover */
+  }
+  
+  /* Mobile navigation container */
+  .mobile-nav {
+    position: relative;
+  }
+  
+  /* ================================================ */
+  /* Section Styles */
+  /* ================================================ */
+  .section {
+    padding: 100px 20px; /* Padding to account for fixed navbar */
+    min-height: 100vh;
+  }
+  .home {
+    background: url('food.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+  }
+  .menu {
+    background: #fff;
+  }
+  .about,
+  .contact {
+    background: #f4f4f4;
+  }
+  
+  /* ================================================ */
+  /* Product Card Styles */
+  /* ================================================ */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+  .product-card h4 {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  .product-card input {
+    width: 80%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* ================================================ */
+  /* Delivery Partners Button Styles */
+  /* ================================================ */
+  .delivery-partners {
+    margin-top: 20px;
+  }
+  .partner {
+    background: #fff;
+    color: #ff6347;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .partner:hover {
+    background: #ff6347;
+    color: #fff;
+  }
+  
+  /* ================================================ */
+  /* Smooth Scrolling */
+  /* ================================================ */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* ================================================ */
+  /* Simple Fade-In Animation */
+  /* ================================================ */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .section {
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  /* ================================================ */
+  /* Responsive Design for Mobile & Tablets */
+  /* ================================================ */
+  @media (max-width: 768px) {
+    /* Hamburger button styling */
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  
+    /* Hide the navbar by default on mobile */
+    .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust as needed based on header height */
+      right: 0;
+      background: #ff6347;
+      width: 100%;
+      text-align: right;
+      padding: 10px 20px;
+    }
+  
+    /* Display navbar when active */
+    .navbar.active {
+      display: flex;
+    }
+  
+    .navbar a {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    /* Adjust product card width for smaller screens */
+    .product-card {
+      width: 80%;
+    }
+  }
+  
+  /* ================================================ */
+  /* Extended Filler Section for Additional Styling */
+  /* ================================================ */
+  /* FILLER START */
+  /* Additional CSS rules, themes, or media queries can be added here */
+  /* FILLER END */
+  
